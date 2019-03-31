@@ -5,8 +5,8 @@ const fs = require('fs');
 // Handles HTTP requests.
 const requestHandler = (request, response) => {
   response.end(`Handling a request on port ${port}`)
-   
-   fs.writeFile('hello-world.txt', 'Hello to this great world', 'utf8', (err) => {
+
+   fs.writeFile('./hello-world.txt', 'Hello to this great world', 'utf8', (err) => {
       if (err) throw err;
       console.log('success')
    });
